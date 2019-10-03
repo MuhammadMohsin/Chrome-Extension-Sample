@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "SampleExtemsion",
+    "version": "2.0",
+    "description": "Sample chrome extension",
+
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": ["background/background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "tabCapture"
+    ],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js": ["content-script/contentScript.js"]
+    }]
+}
