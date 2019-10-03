@@ -1,0 +1,407 @@
+/* Essentials */
+
+html,
+div,
+map,
+dt,
+isindex,
+form,
+header,
+aside,
+section,
+section,
+article,
+footer {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat-Regular";
+    background: #f4f4f4;
+    font-size: 11px;
+    width: 100%;
+    /* min-width: 985px;
+    min-height: 690px; */
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+}
+.Montserrat-Regular {
+    font-family: "Montserrat-Regular" !important;
+}
+@font-face {
+    font-family: 'Montserrat-Hairline';
+    src: url(../fonts/montserrat/Montserrat-Hairline.otf);
+}
+.Montserrat-Hairline {
+    font-family: 'Montserrat-Hairline' !important;
+}
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url(../fonts/montserrat/Montserrat-Thin.ttf);
+}
+.Montserrat-Thin {
+    font-family: "Montserrat-Thin" !important;
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(../fonts/montserrat/Montserrat-Light.otf);
+}
+.Montserrat-Light {
+    font-family: "Montserrat-Light" !important;
+}
+@font-face {
+    font-family: 'Montserrat-UltraLight';
+    src: url(../fonts/montserrat/Montserrat-UltraLight.otf);
+}
+.Montserrat-UltraLight {
+    font-family: "Montserrat-UltraLight" !important;
+}
+
+
+.headerClass {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  background: #fff;
+  align-items: center;
+  cursor: text;
+  border-bottom: 1px solid #EBF0F3;
+}
+
+.headerGearIcon {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#websiteLink {
+  font-size: 12px;
+  color: #3B91DF;
+  padding-left: 7%;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+  max-height: 15px;
+  padding-top: 5px;
+  font-family: roboto;
+  /* height: 16px; */
+}
+
+.lowerContainerDiv {
+  display: flex;
+  flex: 1;
+  height: 94vh;
+}
+
+.leftContainerDiv {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  padding-top: 15px;
+  flex-direction: column;
+  transition: 1s;
+  display: none;
+}
+
+.rightContainerDiv {
+  display: flex;
+  flex: 3;
+  height: 100%;
+  background: white;
+  flex-direction: column;
+}
+
+.searchBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #b4c4d3;
+  /* box-shadow: 0px 0px 1px 0px; */
+  height: 32px;
+  width: 85%;
+}
+
+.searchBoxContainer input {
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+.searchBoxContainer input:focus {
+  border: none;
+  outline: none;
+}
+
+.searchBoxContainer input::placeholder {
+  color: rgb(128, 128, 128, 0.4);  
+  font-weight: bold;
+}
+
+.testCasesList {
+  display: flex;
+  width: 100%;
+  overflow-y: auto;
+  height: 80%;
+}
+
+.rightContainerUpper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  min-height: 50px;
+  border-bottom: 1px solid #ebad60;
+}
+
+.rightContainerFooter {
+  display: flex;
+  /* flex: 2; */
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ebac60;
+  height: 60px;
+}
+
+.saveTestCaseBtn {
+  color: #fff;
+  border: none;
+  height: 27.16px;	
+  width: 148px;	
+  border-radius: 5px;	
+  background: #3B91DF;	
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+
+  cursor: pointer;
+}
+
+.saveTestCaseBtn:hover {
+  background: #1a4a77;
+}
+
+.testCaseName {
+  display: flex;
+  flex: 1;
+  font-weight: bolder;
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.8);
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  font-size: 14px;
+  font-family: roboto;
+}
+
+.testCaseActionIcons {
+  display: flex;
+  flex: 3;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.iconContainer {
+  cursor: pointer;
+}
+
+.iconContainer i {
+  font-weight: lighter !important;
+  color: #3B91DF;
+}
+
+.rightContainerLower {
+  display: flex;
+  flex: 30;
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.displayHidden {
+  display: none !important;
+}
+
+#testCaseCollapseSection {
+  display: none;
+  transition: 1s;
+}
+
+.leftToggleContainer {
+  background-color: #EBF0F3;
+}
+
+#collapseWindow {
+  width: 100%;
+}
+
+.toggleTestCaseDiv {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.caseSearchBox {
+  width: 85%;
+  height: 20px;
+  border-bottom: 1px solid #ddd4d4;
+  position: relative;
+  left: 20px;
+}
+
+.caseSearchInput:focus {
+  outline: none;
+}
+
+.containerCheckmark {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckmark input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee; */
+
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  height: 18px;
+  width: 18px;
+  /* padding-right: 10px; */
+  /* padding-bottom: 7px; */
+  background-color: #ccc;
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+/* .containerCheckmark:hover input ~ .checkmark {
+} */
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckmark input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckmark input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckmark .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#snackbar {
+  visibility: hidden;
+  width: 210px;
+  margin-left: -114px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 30px;
+  font-size: 16px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+.loader {
+  border: 2px solid #fff;
+  border-radius:100%;
+  border-top: 2px solid #ebac60;
+  border-bottom: 2px solid #ebac60;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}

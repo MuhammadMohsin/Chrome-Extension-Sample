@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>AI Test Studio</title>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <header id="headerSectionForDebug" class="headerClass">
+            <div style="display: flex; flex: 1;flex-direction: row; align-items: center;">
+            </div>
+        </header>
+
+        <div style="display: flex;flex-direction: row;overflow-x: hidden;">
+            <div id='testCaseCollapseSection' class="leftToggleContainer">
+                <div class="toggleTestCaseDiv">
+                    <div class="caseSearchBox">
+                        <i style="font-size: 1.4em; color: #92a4b7; font-weight: 600;" class="fas fa-search"></i>
+                        <input class="caseSearchInput" style="width: 70px; border: none; padding-left: 8px;" type="text"
+                            placeholder="Search">
+                    </div>
+                </div>
+                <div id="testCase-grid" class="testCasesList">
+                </div>
+            </div>
+
+            <div id="collapseWindow">
+                <div class="lowerContainerDiv">
+                    <div id="testCase-container" class="leftContainerDiv">
+                        <button style="position: relative; left: -35px;" class="headerGearIcon">
+                            <i class="fas fa-plus" aria-hidden="true"
+                                style=" color: #291818; font-size: 1.2em; padding-left: 8px; "></i>
+                            <span class="monserrat"
+                                style="text-transform: capitalize;color: #4D4D4D;line-height: 27px;">New Case</span>
+                        </button>
+                        <div class="searchBoxContainer">
+                            <input id="filterTestCases" type="text" placeholder="Search">
+                        </div>
+                    </div>
+                    <div id="command-container" class="rightContainerDiv">
+                        <div class="rightContainerUpper" id='right_Upper_sub_Container'>
+                            <div id='debugTestStepName'>
+
+                            </div>
+                            <div id="debugCaseName" style="display: flex;flex: 1;flex-direction: column;">
+                                <div style="display: flex; flex: 1;" id="websiteLink"></div>
+                                <div id="testCaseNameList" class="testCaseName">Test Case Name</div>
+                            </div>
+                            <div id="iconsContainer" class="testCaseActionIcons">
+                                <div id='clearTestCase' class="iconContainer">
+                                    <i title="Clear Test Steps" class="fa fa-times-circle"
+                                        style="font-size: 26px; "></i>
+                                </div>
+                                <div title="Stop" id="record" class="iconContainer">
+                                    <i id="recordIconChange" class="fa fa-pause-circle" style="font-size: 26px; "></i>
+                                </div>
+                                <div id="saveBtnForDebug" class="iconContainer" style="display:none; cursor: pointer;
+                                        cursor: pointer;
+                                        width: 23px;
+                                        height: 23px;
+                                        border-radius: 50px;
+                                        border: 2px solid #3b91df;
+                                        text-align: center;
+                                        margin-left: 5px;
+                                        " title="Save">
+                                    <i id="recordIconChange" class="fa fa-save" style="font-size: 17px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id='DebugHelperText' style="display:none">
+                            <div id="helpDB">
+
+                                <ol style="padding-left: 20px">
+                                    <li style=" padding-left: 10px;"> Perform the action required in this step</li>
+                                    <li style=" padding-left: 10px;"> Click on <img src="../icons/puseIcon.png"
+                                            style="height: 15px;width: 15px;"> to stop recording.</li>
+                                    <li style=" padding-left: 10px;">
+                                        <div style="display: flex; margin-top:4px">Click on <div
+                                                style="line-height: 17px; margin-left: 12px; width: 17px; margin-top: -2px; ">
+                                                <img style="width: 17px; height: 17px;" src="../icons/floppy.svg" />
+                                            </div> &nbsp; to save</div>
+                                    </li>
+
+                                </ol>
+                            </div>
+                            <div id="DebugComLive" style="padding: 15px; display: none">
+                                <div style="display: flex; margin-top:4px">
+                                    <p id="DCMD" style="width: 40%; min-width: 60px; flex: 1;"> </p>
+                                    <p style="flex: 4; text-overflow: ellipsis; overflow: hidden; max-height: 15px; width: 20px;"
+                                        id="DLable"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightContainerLower" id='sub_content'>
+                            <table id="command-grid" class="tablesorter" cellspacing="0">
+                                <tbody id="records-grid">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="rightContainerFooter" id='save_sub_content'>
+                            <button title="Save" id="save_btn" class="saveTestCaseBtn">
+                                Download Test Case
+                                <div class="loader" id="loader"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Snackbar -->
+                    <div id="snackbar"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/recorder.js"></script>
+    <script src="../js/editor.js"></script>
+</body>
+
+</html>
